@@ -1,0 +1,28 @@
+{
+
+    "usuarios":[],
+    "posts":[
+
+        {
+            "id":0,
+            "titulo":"",
+            "conteudo":"",
+            "data_postagem":"",
+            "comentarios":[
+
+                {
+                    "id":0,
+                    "titulo":"",
+                    "estrelas":0,
+                    "conteudo":""
+
+                }
+
+            ]
+
+
+        }
+
+    ]
+
+}
