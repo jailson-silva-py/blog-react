@@ -1,0 +1,24 @@
+.sessao {
+
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 100%;
+    text-align: justify;
+    letter-spacing: .2rem;
+
+}
+
+.sessao ul li {
+
+    list-style: none;
+
+
+}
+
+.sessao ul li:before {
+
+    content: "➣ ";
+
+}

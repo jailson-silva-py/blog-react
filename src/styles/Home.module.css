@@ -1,0 +1,34 @@
+.cabecalhoHome {
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem;
+
+}
+
+.imgCabecalho {
+
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+
+}
+
+.textCabecalho {
+
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.descricao {
+
+    text-align: justify;
+    letter-spacing: 0.3rem;
+    margin: 2rem 0;
+
+}

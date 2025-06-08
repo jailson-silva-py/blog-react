@@ -1,0 +1,31 @@
+.pesquisaPosts {
+
+    height: 2.5em;
+    width: 45%;
+    display: inline-block;
+    position: relative;
+    margin: 2rem 0;
+
+}
+.pesquisa {
+    
+    height: 100%;
+    width: 100%;
+    border-radius: 4em;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 0 3rem;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0px 0px 2px 0px var(--text-color);
+
+}
+
+.pesquisaIcone {
+
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+
+}
