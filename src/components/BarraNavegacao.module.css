@@ -1,0 +1,43 @@
+.navMenu {
+
+    background-color: black;
+
+}
+
+.listaMenu {
+
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+
+}
+
+.itemMenu {
+
+    padding: 40px;
+
+} 
+
+.linkMenu {
+
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all .4s ease;
+    
+
+}
+.linkMenu:hover {
+
+    text-decoration: underline;
+    color: var(--hover-link);
+
+}
+
+.selecionado {
+
+    color: var(--hover-link);
+
+}
