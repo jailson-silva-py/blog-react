@@ -1,0 +1,25 @@
+.linkContent {
+
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    
+    flex: 1px 1 1;
+
+}
+
+
+.link {
+
+    font-size: 0.9rem;
+    text-decoration: none;
+    color:rgb(40, 66, 184);
+    align-self:center;
+
+}
+
+.link:hover {
+
+    text-decoration: underline;
+
+}
