@@ -1,0 +1,23 @@
+
+.btnEnviar {
+
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem auto;
+    background-color: var(--background-secondary-color);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-color);
+    box-shadow: 0px 0px 5px 0px var(--text-color);
+    transition: all ease .4s;
+    font-size: 1rem;
+    font-weight: 800;
+
+}
+
+.btnEnviar:hover {
+
+    transform:scale(1.05);
+
+}
+
