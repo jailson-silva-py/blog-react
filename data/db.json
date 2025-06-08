@@ -1,28 +1,243 @@
 {
-
-    "usuarios":[],
-    "posts":[
-
-        {
-            "id":0,
-            "titulo":"",
-            "conteudo":"",
-            "data_postagem":"",
-            "comentarios":[
-
-                {
-                    "id":0,
-                    "titulo":"",
-                    "estrelas":0,
-                    "conteudo":""
-
-                }
-
-            ]
-
-
-        }
-
-    ]
-
+  "usuarios": [
+    {
+      "id": 0,
+      "usuario": "root",
+      "senha": "admin"
+    },
+    {
+      "usuario": "slayer",
+      "senha": "1234",
+      "id": 1
+    },
+    {
+      "usuario": "testador.insano",
+      "senha": "1234",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 0,
+      "titulo": "Como comecei no Front-End",
+      "conteudo": "Compartilho minha jornada de aprendizado em HTML, CSS e React...",
+      "dataPostagem": "2025-05-15",
+      "principal": true
+    },
+    {
+      "id": 1,
+      "titulo": "5 Dicas para melhorar seu código em JavaScript",
+      "conteudo": "Neste post, falo sobre práticas simples que deixam seu JS mais limpo e eficiente...",
+      "dataPostagem": "2025-05-20",
+      "principal": true
+    },
+    {
+      "id": 2,
+      "titulo": "Organizando seu projeto React com boas práticas",
+      "conteudo": "A estrutura de pastas pode fazer toda a diferença na escalabilidade do seu app...",
+      "dataPostagem": "2025-05-25",
+      "principal": true
+    },
+    {
+      "id": 3,
+      "titulo": "Introdução ao uso de SQL no Front-End",
+      "conteudo": "Entenda como o conhecimento de banco de dados pode ajudar no consumo de APIs...",
+      "dataPostagem": "2025-05-28",
+      "principal": true
+    },
+    {
+      "id": 4,
+      "titulo": "Criando componentes reutilizáveis em React",
+      "conteudo": "Evite repetir código e mantenha seu projeto limpo com componentes genéricos...",
+      "dataPostagem": "2025-06-01",
+      "principal": true
+    },
+    {
+      "id": 5,
+      "titulo": "React Router na prática: rotas sem dor",
+      "conteudo": "Aprenda a configurar e usar rotas com React Router de forma eficiente...",
+      "dataPostagem": "2025-06-04",
+      "principal": true
+    },
+    {
+      "id": 6,
+      "titulo": "Lidando com estados globais no React",
+      "conteudo": "Context API, Redux e outras abordagens para gerenciar estados no app...",
+      "dataPostagem": "2025-06-06",
+      "principal": false
+    },
+    {
+      "id": 7,
+      "titulo": "Hooks customizados: reutilizando lógica no React",
+      "conteudo": "Entenda como criar hooks personalizados para abstrair e organizar funcionalidades...",
+      "dataPostagem": "2025-06-08",
+      "principal": true
+    },
+    {
+      "id": 8,
+      "titulo": "Estilizando seu app com CSS Modules",
+      "conteudo": "Evite conflitos de classes e melhore a organização usando CSS Modules no React...",
+      "dataPostagem": "2025-06-10",
+      "principal": false
+    },
+    {
+      "id": 9,
+      "titulo": "Performance em React: dicas para apps mais rápidos",
+      "conteudo": "Descubra como otimizar renderizações e reduzir re-renders no React...",
+      "dataPostagem": "2025-06-12",
+      "principal": true
+    },
+    {
+      "id": 10,
+      "titulo": "Testando componentes com React Testing Library",
+      "conteudo": "Descubra como escrever testes eficazes e confiáveis para seus componentes React...",
+      "dataPostagem": "2025-06-13",
+      "principal": false
+    },
+    {
+      "id": 11,
+      "titulo": "Como consumir APIs REST no React",
+      "conteudo": "Veja na prática como integrar endpoints RESTful usando fetch e axios...",
+      "dataPostagem": "2025-06-14",
+      "principal": false
+    },
+    {
+      "id": 12,
+      "titulo": "Entendendo o ciclo de vida dos hooks",
+      "conteudo": "Aprenda como useEffect e outros hooks se comportam durante o ciclo de renderização...",
+      "dataPostagem": "2025-06-15",
+      "principal": false
+    },
+    {
+      "id": 13,
+      "titulo": "Dark Mode com CSS e React",
+      "conteudo": "Aprenda a implementar um tema escuro no seu app com toggle e persistência local...",
+      "dataPostagem": "2025-06-16",
+      "principal": false
+    },
+    {
+      "id": 14,
+      "titulo": "Criando formulários acessíveis em React",
+      "conteudo": "Melhore a usabilidade do seu app com boas práticas de acessibilidade em formulários...",
+      "dataPostagem": "2025-06-17",
+      "principal": false
+    },
+    {
+      "id": 15,
+      "titulo": "React com TypeScript: introdução para devs JS",
+      "conteudo": "Comece a usar TypeScript em seus projetos React sem complicação...",
+      "dataPostagem": "2025-06-18",
+      "principal": false
+    },
+    {
+      "id": 16,
+      "titulo": "Organizando componentes por domínio",
+      "conteudo": "Entenda como estruturar seus componentes por funcionalidade e contexto...",
+      "dataPostagem": "2025-06-19",
+      "principal": false
+    },
+    {
+      "id": 17,
+      "titulo": "Gerando PDFs no front-end com React",
+      "conteudo": "Veja como gerar relatórios e documentos PDF direto do navegador com bibliotecas JS...",
+      "dataPostagem": "2025-06-20",
+      "principal": false
+    },
+    {
+      "id": 18,
+      "titulo": "Criando animações suaves com framer-motion",
+      "conteudo": "Transforme a experiência do usuário usando framer-motion com gestos e transições...",
+      "dataPostagem": "2025-06-21",
+      "principal": false
+    },
+    {
+      "id": 19,
+      "titulo": "Como usar o useReducer em situações reais",
+      "conteudo": "Explore casos onde useReducer pode ser mais vantajoso que useState...",
+      "dataPostagem": "2025-06-22",
+      "principal": false
+    }
+  ],
+  "comentarios": [
+    {
+      "id": 0,
+      "postId": 0,
+      "titulo": "Inspirador!",
+      "estrelas": 5,
+      "conteudo": "Muito legal ver como você começou. Me identifiquei bastante!",
+      "autor": "Mariana Codes"
+    },
+    {
+      "id": 1,
+      "postId": 1,
+      "titulo": "Simples e direto",
+      "estrelas": 4,
+      "conteudo": "Dicas práticas que realmente fazem diferença. Valeu!",
+      "autor": "Carlos Dev"
+    },
+    {
+      "id": 2,
+      "postId": 2,
+      "titulo": "Show!",
+      "estrelas": 5,
+      "conteudo": "Já comecei a reorganizar meu projeto depois de ler isso. Obrigado!",
+      "autor": "Lúcia Frontend"
+    },
+    {
+      "id": 3,
+      "postId": 3,
+      "titulo": "Curioso!",
+      "estrelas": 4,
+      "conteudo": "Nunca tinha pensado no quanto SQL ajuda no front. Muito bom.",
+      "autor": "Diego Stack"
+    },
+    {
+      "id": 4,
+      "postId": 4,
+      "titulo": "Muito útil",
+      "estrelas": 5,
+      "conteudo": "Agora entendi como deixar meus componentes mais reaproveitáveis. Valeu demais!",
+      "autor": "Renata JS"
+    },
+    {
+      "id": 5,
+      "postId": 0,
+      "titulo": "Muito bom!",
+      "autor": "João Dev",
+      "conteudo": "Muito bom o post! Eu estava justamente com dúvidas sobre como integrar o useSearchParams no React Router v6, e você explicou de forma bem direta. Parabéns pelo conteúdo!",
+      "estrelas": 5
+    },
+    {
+      "id": 6,
+      "postId": 0,
+      "titulo": "Show!",
+      "autor": "Camila Front",
+      "estrelas": 4,
+      "conteudo": "Show! Só senti falta de uma dica sobre como aplicar debounce na busca com ?q=. Isso evitaria muitas requisições seguidas no json-server. Fora isso, top demais!"
+    },
+    {
+      "id": 7,
+      "postId": 0,
+      "autor": "Lucas S.",
+      "titulo": "Funcional!",
+      "estrelas": 5,
+      "conteudo": "Gostei muito da abordagem funcional usando Array.from() pra gerar elementos. Vou aplicar isso no meu projeto de portfólio. Valeu pelo post!"
+    },
+    {
+      "id": 8,
+      "postId": 0,
+      "titulo": "Post excelente!",
+      "autor": "Fernanda Codes",
+      "estrelas": 5,
+      "conteudo": "Post excelente! É difícil encontrar conteúdo direto ao ponto sobre json-server + React. Já favoritei aqui. 👏"
+    },
+    {
+      "id": 9,
+      "postId": 0,
+      "autor": "Vinícius UX",
+      "titulo": "Técnico, Grosso!",
+      "estrelas": 5,
+      "conteudo": "Conteúdo técnico muito bem escrito. Gostei que você se preocupou com a semântica e boas práticas. Vai ajudar bastante quem tá aprendendo!"
+    }
+  ]
 }
