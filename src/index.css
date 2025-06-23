@@ -10,7 +10,7 @@ html {
 
     font-size: 16px;
     background-color: var(--background-main-color);
-    height: 100%;
+    min-height: 100vh;
 
 }
 
@@ -19,12 +19,12 @@ body {
     font-size: 1.4rem;
     color: var(--text-color);
     font-family: var(--font-default);
-    height: 100%;
+    min-height: 100vh;
     
 
 }
 
-:root {
+:root[data-theme='dark'] {
 
     --text-color: white;
     --background-main-color: rgb(17, 16, 16);
@@ -33,4 +33,13 @@ body {
     --font-default: "Poppins", sans-serif;
     --dark-shadow-color: rgba(255, 255, 255, 0.4);
 
+}
+
+:root[data-theme='light'] {
+  --text-color: #1a1a1a;                 /* preto suave pra leitura */
+  --background-main-color: #f5f5f5;      /* cinza claro quase branco */
+  --hover-link: #1a73e8;                 /* azul vivo pra chamar atenção */
+  --background-secondary-color: #ffffff; /* branco puro pra cards/secundários */
+  --font-default: "Poppins", sans-serif; /* mantém sua tipografia */
+  --dark-shadow-color: rgba(0, 0, 0, 0.1); /* sombra leve e discreta */
 }
