@@ -9,6 +9,7 @@ import Toast from "../Toast/Toast"
 import useManualFetch from "../../hooks/useManualFetch"
 import CampoTextInput from "../CampoTextInput/CampoTextInput"
 import { useAutenticacaoContext } from "../../hooks/useAutenticacaoContext"
+import { API } from "../../api"
 
 
  
@@ -42,7 +43,8 @@ const FormularioComentario = ({postId}:{postId:string | undefined}) => {
     } 
 
     const handleSubmit = (e:FormEvent) => {
-        const url = 'http://localhost:3000/comentarios'
+
+        const url = `${API}/comentarios`
         e.preventDefault()
 
         if (numEstrelas <= 0) {
@@ -114,7 +116,7 @@ const FormularioComentario = ({postId}:{postId:string | undefined}) => {
     useEffect(() => {
         (async () => {
 
-        await getDados(`http://localhost:3000/comentarios?postId=${
+        await getDados(`${API}/comentarios?postId=${
             postId}&&autor=${usuarioLogado?.usuario}`).then((comentarioAntigo) => {
 
                 if(comentarioAntigo && comentarioAntigo.length > 0) {
