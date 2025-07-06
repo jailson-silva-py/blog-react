@@ -1,6 +1,7 @@
 import useFetch from '../../hooks/useFetch'
 import {FaStar, FaRegStar} from 'react-icons/fa'
 import classes from './Comentarios.module.css'
+import {API} from '../../api'
 
 interface Iprops {
 
@@ -23,7 +24,7 @@ const gerarEstrelasVazias = (item:ComentarioType) => {
 }
 
 const Comentarios = ({postId}:Iprops) => {
-    const url = 'http://localhost:3000/comentarios?postId='+postId
+    const url = `${API}/comentarios?postId=${postId}`
     const {items} = useFetch(url)
     return (
         
