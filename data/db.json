@@ -6,14 +6,9 @@
       "senha": "admin"
     },
     {
-      "usuario": "slayer",
-      "senha": "1234",
+      "usuario": "Imensuravel",
+      "senha": "123",
       "id": 1
-    },
-    {
-      "usuario": "testador.insano",
-      "senha": "1234",
-      "id": 2
     }
   ],
   "posts": [
@@ -238,6 +233,14 @@
       "titulo": "Técnico, Grosso!",
       "estrelas": 5,
       "conteudo": "Conteúdo técnico muito bem escrito. Gostei que você se preocupou com a semântica e boas práticas. Vai ajudar bastante quem tá aprendendo!"
+    },
+    {
+      "postId": "0",
+      "titulo": "Muito bom!",
+      "estrelas": 5,
+      "conteudo": "Textozinho interessante, de fato.",
+      "autor": "Imensuravel",
+      "id": 10
     }
   ]
 }

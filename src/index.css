@@ -2,7 +2,8 @@
 
     padding: 0;
     margin: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;   
+    transition: background-color .5s ease-in-out, color .5s ease-in-out; 
 
 }
 
@@ -11,6 +12,8 @@ html {
     font-size: 16px;
     background-color: var(--background-main-color);
     min-height: 100vh;
+    width: 100%;
+    overflow-x:hidden;
 
 }
 
@@ -20,7 +23,14 @@ body {
     color: var(--text-color);
     font-family: var(--font-default);
     min-height: 100vh;
-    
+    overflow-x:hidden;
+
+}
+
+/* Pra tirar aquele X padrão do input[type="search"] que limpa o campo (muito feio)*/
+input[type="search"]::-webkit-search-cancel-button {
+
+    appearance: none;
 
 }
 
@@ -32,14 +42,16 @@ body {
     --background-secondary-color: black;
     --font-default: "Poppins", sans-serif;
     --dark-shadow-color: rgba(255, 255, 255, 0.4);
+    --bottom-menu-border-color: rgba(255, 255, 255, 0.1)  
 
 }
 
 :root[data-theme='light'] {
-  --text-color: #1a1a1a;                 /* preto suave pra leitura */
-  --background-main-color: #f5f5f5;      /* cinza claro quase branco */
-  --hover-link: #1a73e8;                 /* azul vivo pra chamar atenção */
-  --background-secondary-color: #ffffff; /* branco puro pra cards/secundários */
-  --font-default: "Poppins", sans-serif; /* mantém sua tipografia */
-  --dark-shadow-color: rgba(0, 0, 0, 0.1); /* sombra leve e discreta */
+  --text-color: #1a1a1a;                
+  --background-main-color: rgb(240, 240, 240);      
+  --hover-link: #1a73e8;                 
+  --background-secondary-color: rgb(243, 243, 243); 
+  --font-default: "Poppins", sans-serif; 
+  --dark-shadow-color: rgba(0, 0, 0, 0.4);
+  --bottom-menu-border-color: rgba(0, 0, 0, 0.1)  
 }

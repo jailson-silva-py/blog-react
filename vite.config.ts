@@ -11,9 +11,10 @@ export default defineConfig({
     setupFiles:'src/setupTest.ts',
     coverage: {
 
-      exclude:['src/types', 'src/main.tsx']
+      exclude:['vite.config.ts', 'eslint.config.js','src/types', 'src/main.tsx']
 
     }
 
-  }
+
+  },
 })

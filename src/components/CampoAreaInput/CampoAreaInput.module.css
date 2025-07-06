@@ -1,0 +1,45 @@
+.padraoInput {
+
+    outline: none;
+    background-color: transparent;
+    border: solid var(--text-color) 1px;
+    color: var(--text-color);
+    padding: 0 .5rem;
+    border-radius: 8px;
+    height: 3em;
+    width: 60%;
+    transition: all 0.4s ease;
+
+}
+
+.padraoInput:focus {
+
+    transform: scale(1.05);
+
+}
+
+.campoForm {
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width:80%;
+    gap: .8rem;
+
+}
+
+.campoTitulo {
+
+    font-weight: 800;
+    font-size: clamp(1.2rem, 1vw + 0.6rem, 1.8rem);
+
+}
+
+.areaInput {
+
+    height: 10em;
+    padding: .5rem;
+    width: 100%;
+    resize: none;
+    
+}

@@ -2,7 +2,6 @@ import classes from '../styles/Posts.module.css'
 import {MdSearch} from 'react-icons/md'
 import { useState, useMemo, ChangeEvent } from 'react'
 import { useCallback } from 'react'
-import useFetch from '../hooks/useFetch'
 import PostsExternos from '../components/PostsExternos/PostsExternos'
 
 const Posts = () => {
@@ -19,8 +18,6 @@ const Posts = () => {
         setPalavrasChave(e.target.value)
         console.log("valores setados")
     }, [])
-
-    const {items} = useFetch(url)
 
     return (
 

@@ -15,6 +15,7 @@ import { AutenticacaoContextProvider } from './context/AutenticacaoContext'
 import { MensagemContextProvider } from './context/MensagemContext'
 import { LoadingContextProvider } from './context/LoadingContext'
 import Loading from './components/Loading/Loading'
+import { TemaContext, TemaContextProvider } from './context/TemaContext'
 
 const router = createBrowserRouter([
 
@@ -81,6 +82,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <TemaContextProvider>
     <LoadingContextProvider>
       <MensagemContextProvider>
         <AutenticacaoContextProvider>
@@ -91,5 +93,6 @@ createRoot(document.getElementById('root')!).render(
         </AutenticacaoContextProvider>
       </MensagemContextProvider>
     </LoadingContextProvider>
+    </TemaContextProvider>
   </StrictMode>,
 )

@@ -1,0 +1,35 @@
+.campo {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    flex: 1px 2 2;
+
+}
+
+.campoTitulo {
+
+    font-weight: 800;
+    font-size: clamp(1.2rem, 1vw + 0.6rem, 1.8rem);
+
+}
+
+.campoInput {
+
+    height: 3em;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px var(--text-color);
+    padding: 1rem;
+    color: var(--text-color);
+    outline:none;
+
+}
+
+.campoInput:focus {
+
+    transform: scale(1.025);
+
+}

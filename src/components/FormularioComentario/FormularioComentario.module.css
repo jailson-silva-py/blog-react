@@ -1,0 +1,33 @@
+.tituloEstrelas {
+
+    font-weight: 800;
+    font-size: clamp(1.2rem, 1vw + 0.6rem, 1.8rem);
+
+}
+
+.estrelasContent {
+
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.1rem, 1vw + 0.2rem, 1rem);
+    list-style: none;
+
+}
+
+
+
+
+.estrelasContent svg {
+
+    cursor: pointer;
+    height: clamp(1rem, 1vw + 1rem, 2rem);
+    width: clamp(1rem, 1vw + 1rem, 2rem);;
+    color: var(--text-color);
+
+}
+
+.hovered {
+
+    opacity: 0.5;
+
+}

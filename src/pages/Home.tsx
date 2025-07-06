@@ -11,24 +11,25 @@ const Home = () => {
         <>
         <main id='content'>
 
-            <div className={classes.cabecalhoHome}>
+            <div className={classes.cabecalhoHome} role='cabecalho-home'>
 
             <img className={classes.imgCabecalho} src={foto} alt="foto-perfil" />
             <div className={classes.textCabecalho}>
-            <h1>Jailson S.Pereira</h1>
-            <h3>Desenvolvedor front-end</h3>
-            <i>Tecnologias: React, Javascript, CSS, HTML, Typescript</i>
+            <h1 aria-label='nome-autor'>Jailson S.Pereira</h1>
+            <h3 aria-label='area-autor'>Desenvolvedor front-end</h3>
+            <i>Tecnologias: React, Javascript, CSS, HTML e Typescript</i>
             </div>
 
             </div>
 
             <p className={classes.descricao}>
 
-                Sou desenvolvedor front-end com foco em criar interfaces modernas, responsivas e centradas
-                na experiência do usuário. Tenho domínio em React, JavaScript, HTML e CSS, além de uma boa
-                base em bancos de dados SQL, o que me permite entender bem o fluxo completo de dados entre
-                o front e o back-end. Curioso por natureza e sempre em evolução, gosto de transformar 
-                ideias em aplicações funcionais, limpas e performáticas.
+                Como dev front-end, concentro-me em entregar UIs responsivas e
+                centradas no usuário. Tenho experiência prática com HTML, CSS,
+                JavaScript, TypeScript e React, e uma base em SQL que me ajuda
+                a mapear todo o caminho dos dados. Curioso por natureza e sempre
+                em evolução, gosto de transformar ideias em aplicações funcionais,
+                limpas e performáticas.
 
             </p>
 

@@ -1,6 +1,9 @@
 import classes from '../styles/Contato.module.css'
 import { useState, useCallback } from 'react'
+import CampoTextInput from '../components/CampoTextInput/CampoTextInput'
 import CampoAreaInput from '../components/CampoAreaInput/CampoAreaInput'
+import Formulario from '../components/Formulario/Formulario'
+import BotaoSubmit from '../components/BotaoSubmit/BotaoSubmit'
 
 const email = "j4ilsonsilv4pereir4@gmail.com"
 
@@ -11,6 +14,7 @@ const Contact = () => {
     const copiar =  useCallback(() => {
 
     navigator.clipboard.writeText(email)
+    
     .then(() => {
 
         setCopiado(true)
@@ -37,8 +41,9 @@ const Contact = () => {
                 <section className={classes.intro}>
                 <h1 className={classes.titulo}>Entre em contato</h1>
 
-                <label className={classes.emailContent}>
-                <span onClick={copiar} className={classes.email}>{email}</span>
+                <label className={classes.emailContent} role='email-send-simplify'>
+                <span onClick={copiar} className={classes.email} 
+                aria-label='email-copy'>{email}</span>
                 <a href="mailto:j4ilsonsilv4pereir4@gmail.com">Enviar E-mail</a>
                 </label>
                 </section>
@@ -47,21 +52,18 @@ const Contact = () => {
 
                 <h1>Mande uma mensagem:</h1>
 
-                <form className={classes.formulario}>
+                <Formulario handleSubmit={() => {}}>
 
-                <label className={classes.campoForm}>
-                <span className={classes.campoTitulo}>Nome:</span>
-                <input type="text" placeholder="Seu nome" className={classes.padraoInput} required />
-                </label>
+                    <CampoTextInput dica="Seu nome..." texto="Nome:"/>
 
-                <label className={classes.campoForm}>
-                <span className={classes.campoTitulo}>E-mail:</span>
-                <input type="email" placeholder="Seu e-mail" className={classes.padraoInput} required />
-                </label>
+                    <CampoTextInput dica="Seu e-mail..." texto="E-mail:"/>
+                    
+                    <CampoAreaInput dica="Seu comentário..." texto="Comentário:"/>
 
-                <CampoAreaInput texto="Comentario: " dica="Digite seu comentário ..."/>
-                <button type="submit" className={classes.padraoSubmit}>Enviar</button>
-                </form>
+                    <BotaoSubmit texto="Enviar"/>
+
+                </Formulario>
+
                 </section>
 
 

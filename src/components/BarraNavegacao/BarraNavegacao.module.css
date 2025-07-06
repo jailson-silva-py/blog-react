@@ -1,0 +1,185 @@
+@keyframes expandirEsquerdaDireita {
+
+    from {width: 0%;}
+    to {}
+
+}
+
+
+.navMenu {
+
+    background-color: var(--background-secondary-color);
+    border-bottom: 2px solid var(--bottom-menu-border-color);
+    position: relative;
+
+}
+
+.listaMenu {
+
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+
+}
+
+
+.itemMenu {
+
+    padding: 20px;
+    transition: none;
+    max-width: 100%;
+    flex: 1 1 1px;
+    font-size: clamp(1rem, 1vw + 0.2rem, 1.6rem);
+    
+} 
+.contentDropdownUsuario {
+
+    width: max-content;
+    margin-left: auto;
+    max-width: 100%;
+    position: relative;
+    
+
+}
+
+.itemUsuario {
+
+    flex: 4 1 1px;
+    
+
+}
+
+.itemUsuario a {
+
+    display:inline-block;
+    margin-left: auto;
+
+}
+
+
+.linkMenu {
+
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all .4s ease;
+    
+
+}
+
+.linkMenu:hover {
+
+    text-decoration: underline;
+    color: var(--hover-link);
+
+}
+
+.selecionado {
+
+    color: var(--hover-link);
+
+}
+
+.menuSuspenso {
+
+    height: 3em;
+    max-width: 100%;
+    border-radius: 1rem;
+    font-weight: 500;
+    position: absolute;
+    
+
+}
+
+.menuSuspensoItem {
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+
+}
+
+.mostrar {
+
+    display: block;
+
+}
+
+.esconder {
+
+    display: none;
+
+}
+
+.iconeMenuMobile {
+
+    color: var(--hover-link);
+
+}
+
+.menuMobile svg {
+
+    transition: .2s color ease;
+
+}
+
+.menuMobile svg:hover {
+
+    color: var(--hover-link);
+
+}
+
+
+@media (max-width:1080px) {
+
+    .listaMenu {
+
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+
+    }
+
+    .itemMenu {
+
+    padding: 10px;
+
+    }
+
+    .itemMenuContentMobile {
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+
+    .itemMenu.itemMenuContentMobile {
+
+        background-color: var(--background-secondary-color);
+        height: 100vh;
+        width: 60%;
+        animation: expandirEsquerdaDireita .5s ease;
+        z-index: 100;
+
+    }
+
+    .itemUsuario {
+
+        order:-3;
+        margin: 0 auto;
+        max-width: 98%;
+
+    }
+
+    .menuSuspenso {
+
+        position: relative;
+        max-width: 98%;
+        z-index: 100;
+
+    }
+
+}

@@ -6,14 +6,20 @@
     align-items:flex-start;
     width: 100%;
     text-align: justify;
-    letter-spacing: .2rem;
+    letter-spacing: clamp(.05rem, .3vw, .2rem);
+
+}
+
+.sessao p {
+
+    font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
 
 }
 
 .sessao ul li {
 
     list-style: none;
-
+    font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
 
 }
 

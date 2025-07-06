@@ -4,19 +4,19 @@ const Sobre = () => {
 
     return (
 
-        <>
+      <>
         
       <main id="content">
       <section className={classes.sessao}>
         <h1>Sobre o Blog</h1>
-        <p>
+        <p aria-label='paragrafo-sobre-blog'>
           Este blog foi criado com o propósito de compartilhar experiências, aprendizados e reflexões sobre desenvolvimento web, com foco especial em React JS.
         </p>
       </section>
 
       <section className={classes.sessao}>
         <h2>Missão</h2>
-        <p>
+        <p aria-label='paragrafo-missao'>
           Tornar o conhecimento acessível de forma prática, direta e gratuita, ajudando desenvolvedores
           a evoluírem com conteúdos úteis e bem explicados. Demonstrar o conhecimento do autor através de
           boas práticas de programação com o intuito de utilizar o blog para representatividade.
@@ -37,16 +37,16 @@ const Sobre = () => {
 
       <section className={classes.sessao}>
         <h2>Sobre o Autor</h2>
-        <p>
+        <p aria-label='paragrafo-sobre-autor'>
           Desenvolvido por Jailson Silva Pereira, entusiasta de tecnologia e apaixonado por 
           desenvolvimento front-end. Formado em Técnico em informática e atualmente 
           aprendendo TypeScript (06/06/2025). Este projeto representa um espaço para aprendizado contínuo
           e contribuição com a comunidade em uma jornada de aperfeiçoamento das referentes tecnologias.
         </p>
       </section>
-    </main>
+      </main>
 
-        </>
+      </>
 
     )
 

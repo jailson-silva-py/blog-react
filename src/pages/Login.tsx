@@ -73,7 +73,7 @@ const Login = () => {
                 <h1>Login</h1>
                 <CampoInput texto="Usuário:" valorInput={usuario}
                 funcaoChangeInput={changeUsuario} dica="Digite o nome do usuário..."/>
-                <CampoInput texto="Senha:" valorInput={senha}
+                <CampoInput senha={true} texto="Senha:" valorInput={senha}
                 funcaoChangeInput={changeSenha} dica="Digite sua senha..."/>
                 <LinkAlternativo caminho='/criar_conta/' texto="Criar conta"/>
                 <BotaoSubmit texto="Enviar"/>

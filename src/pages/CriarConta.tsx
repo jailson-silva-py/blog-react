@@ -66,7 +66,7 @@ const CriarConta = () => {
                 <CampoTextInput texto="Usuário:" dica="Digite seu usuário..." valorInput={usuario}
                 funcaoChangeInput={changeUsuario}/>
 
-                <CampoTextInput texto="Senha:" dica="Digite sua senha..." valorInput={senha1}
+                <CampoTextInput senha={true} texto="Senha:" dica="Digite sua senha..." valorInput={senha1}
                 funcaoChangeInput={changeSenha(setSenha1)}/>
 
                 <CampoTextInput texto="Confirmação de senha:" dica="Confirme sua senha..." valorInput={senha2}

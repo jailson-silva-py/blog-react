@@ -1,0 +1,74 @@
+
+.pricipaisPosts {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    margin: 4rem 0;
+    gap: 1rem;
+    
+
+}
+
+.pricipaisPosts *:not(p) { text-align: center; } 
+
+.pricipaisPosts p {
+
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(0.8rem, 1vw + 0.2rem, 2rem);
+
+}
+
+.post {
+
+    padding: 1rem;
+    border-radius: 1em;
+    box-shadow: 2px 2px 10px 0px var(--dark-shadow-color);
+
+}
+
+.post i {
+
+    font-size: clamp(0.8rem, 1vw + 0.1rem, 1.5rem);
+
+}
+
+.post * {margin:.2rem 0}
+
+.postLink {
+
+    text-decoration: none;
+    color: rgb(26, 128, 146);
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(1rem, 1vw + 0.4rem, 2rem)
+
+}
+
+.postLink:hover {
+
+    color:var(--hover-link)
+
+}
+
+/*Media query para consetar quebra de layout em largura menor que +-520*/
+
+@media(max-width:520px) {
+
+    .pricipaisPosts {
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
+
+
+}

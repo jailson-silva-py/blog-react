@@ -1,0 +1,23 @@
+@keyframes balancar {
+
+    0%, 50%, 100% {left:49%} 
+    25%, 75% {left:50%}
+
+}
+
+.toast {
+
+    background: var(--background-secondary-color);
+    opacity: 0.8;
+    position: fixed;
+    padding: 1.5rem;
+    font-size: clamp(.9rem, 1vw + 0.2rem, 1.4rem);
+    backdrop-filter: blur(100px);
+    left: 50%;
+    bottom: 5%;
+    box-shadow: 0px 0px 2px 1px var(--dark-shadow-color);
+    transform: translateX(-50%);
+    border-radius: 8px;
+    font-weight: 700;
+    animation: balancar .4s ease;
+}

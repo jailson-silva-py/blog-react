@@ -1,0 +1,28 @@
+@keyframes rotacao {
+
+    from {transform: rotate(0deg);}
+    to {transform:rotate(360deg)}
+    
+
+}
+
+.loadingContent {
+
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .8;
+    position: absolute;
+    left:0;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.loading {
+
+    animation: rotacao 1s infinite;
+
+}
