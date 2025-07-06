@@ -9,6 +9,7 @@ import useMensagemContext from '../hooks/useMensagemContext'
 import Toast from '../components/Toast/Toast'
 import useManualFetch from '../hooks/useManualFetch'
 import Loading from '../components/Loading/Loading'
+import { API } from '../api'
 
 
 const Login = () => {
@@ -23,7 +24,7 @@ const Login = () => {
     const handleSubmit = async (e:ChangeEvent<HTMLInputElement>) => {
 
         e.preventDefault();
-        const url = 'http://localhost:3000/usuarios?usuario='+usuario+'&&'+'senha='+senha
+        const url = `${API}/usuarios?usuario=${usuario}&&senha=${senha}`
         
         let dados = await getDados(url)
 

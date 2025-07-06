@@ -3,20 +3,21 @@ import {MdSearch} from 'react-icons/md'
 import { useState, useMemo, ChangeEvent } from 'react'
 import { useCallback } from 'react'
 import PostsExternos from '../components/PostsExternos/PostsExternos'
+import { API } from '../api'
 
 const Posts = () => {
 
     const [palavrasChave, setPalavrasChave] = useState("")
     const url = useMemo(() => {
 
-        return palavrasChave ? "http://localhost:3000/posts?q="+palavrasChave:"http://localhost:3000/posts"
+        return palavrasChave ? `${API}/posts?q=${palavrasChave}`: `${API}/posts`
 
     }, [palavrasChave])
 
     const handlePesquisa = useCallback((e:ChangeEvent<HTMLInputElement>) =>  {
 
         setPalavrasChave(e.target.value)
-        console.log("valores setados")
+      
     }, [])
 
     return (

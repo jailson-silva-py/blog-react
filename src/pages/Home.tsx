@@ -1,8 +1,9 @@
 import foto from '../assets/img/foto.png'
 import classes from '../styles/Home.module.css'
 import PostsExternos from '../components/PostsExternos/PostsExternos'
+import { API } from '../api'
 
-const url = "http://localhost:3000/posts/?principal=true"
+const url = `${API}/posts/?principal=true`
 
 const Home = () => {
     

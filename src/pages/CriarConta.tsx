@@ -6,6 +6,7 @@ import useManualFetch from '../hooks/useManualFetch'
 import {useNavigate} from 'react-router-dom'
 import useMensagemContext from '../hooks/useMensagemContext'
 import Loading from '../components/Loading/Loading'
+import { API } from '../api'
 
 const CriarConta = () => {
 
@@ -36,7 +37,7 @@ const CriarConta = () => {
     const handleSubmit = useCallback( async (e:FormEvent) => {
 
         if (senha1 != senha2){alert("As senhas precisam ser iguais!"); return}
-        const url = "http://localhost:3000/usuarios?usuario="+usuario
+        const url = `${API}?usuario=${usuario}`
         e.preventDefault();
         let dados = await getDados(url)
 
@@ -49,7 +50,7 @@ const CriarConta = () => {
         } else {
 
             console.log(dados)
-            const rep = await setDados("http://localhost:3000/usuarios/", {usuario, senha:senha1})
+            const rep = await setDados(`${API}/usuarios/`, {usuario, senha:senha1})
             dispatch({type:"MOSTRAR"})
             rep && navegar('/login/')
 
