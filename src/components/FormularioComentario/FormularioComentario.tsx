@@ -59,6 +59,7 @@ const FormularioComentario = ({postId}:{postId:string | undefined}) => {
         else if (!usuarioLogado) {
 
             window.alert('É preciso estar logado para Comentar')
+            return
 
         }
 
