@@ -2,7 +2,7 @@ import Formulario from "../Formulario/Formulario"
 import CampoAreaInput from "../CampoAreaInput/CampoAreaInput"
 import classes from "./FormularioComentario.module.css"
 import { FaRegStar, FaStar } from "react-icons/fa"
-import { ChangeEvent, FormEvent, ReactElement, useEffect, useState } from 'react'
+import { ChangeEvent, FormEvent, ReactElement, useEffect, useState, useMemo } from 'react'
 import BotaoSubmit from "../BotaoSubmit/BotaoSubmit"
 import useMensagemContext from "../../hooks/useMensagemContext"
 import Toast from "../Toast/Toast"
@@ -25,6 +25,9 @@ const FormularioComentario = ({postId}:{postId:string | undefined}) => {
 
     const [titulo, setTitulo] = useState('')
     const [comentario, setComentario] = useState('')
+
+    const comentarioAtual = useMemo(() => `${API}/comentarios?postId=${
+            postId}&autor=${usuarioLogado?.usuario}`, [usuarioLogado])
 
     const classeEstrelaHovered = (indice:number) => {
 
@@ -61,10 +64,15 @@ const FormularioComentario = ({postId}:{postId:string | undefined}) => {
 
         (async () => {
 
-            const dados = await setDados(url, {
-                postId, titulo, estrelas:numEstrelas, conteudo:comentario, 
-                autor:usuarioLogado?.usuario})    
-                
+                const dados = await getDados(comentarioAtual)
+
+                if (dados.length === 0) { 
+                    await setDados(url, {
+                    postId, titulo, estrelas:numEstrelas, conteudo:comentario, 
+                    autor:usuarioLogado?.usuario})    
+                }
+
+                return        
     
         })()
 
@@ -116,8 +124,7 @@ const FormularioComentario = ({postId}:{postId:string | undefined}) => {
     useEffect(() => {
         (async () => {
 
-        await getDados(`${API}/comentarios?postId=${
-            postId}&&autor=${usuarioLogado?.usuario}`).then((comentarioAntigo) => {
+        await getDados(comentarioAtual).then((comentarioAntigo) => {
 
                 if(comentarioAntigo && comentarioAntigo.length > 0) {
                     [comentarioAntigo] = comentarioAntigo
