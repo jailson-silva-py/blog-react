@@ -1,0 +1,27 @@
+name: App Blog React CI
+on: [push, pull_request]
+
+jobs: 
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps: 
+
+      - name: 🔄 Checkout code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Instalando Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: 📦 Instalando dependências
+        run: npm install
+
+      - name: 🧪 Rodando testes
+        run: npm run test:ci
+
+      - name: 🧪 Rodando testes com coverage
+        run: npm run test:coverage
+
+      - name: 🏗️ Buildando app
+        run: npm run build
