@@ -63,7 +63,7 @@ const CriarConta = () => {
         <>
         <main id="content">
             <Formulario handleSubmit={handleSubmit}>
-
+                <h1>Criar Conta</h1>
                 <CampoTextInput texto="Usuário:" dica="Digite seu usuário..." valorInput={usuario}
                 funcaoChangeInput={changeUsuario}/>
 

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 interface Iprops {
 
@@ -27,7 +27,7 @@ const CodigoFormatado:any = ({ node, inline, className, children, ...props }:Ipr
         
         return (
             <SyntaxHighlighter
-                style={vscDarkPlus}
+                style={okaidia}
                 language={realLinguagem}
                 PreTag="div"
                 showLineNumbers={false} // Opcional: mostrar números das linhas
