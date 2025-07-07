@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import LinkAlternativo from '../components/LinkAlternativo/LinkAlternativo'
 import CampoInput from '../components/CampoTextInput/CampoTextInput'
 import Formulario from '../components/Formulario/Formulario'
@@ -21,7 +21,7 @@ const Login = () => {
     const {getDados} =  useManualFetch()
 
 
-    const handleSubmit = async (e:ChangeEvent<HTMLInputElement>) => {
+    const handleSubmit = async (e:FormEvent) => {
 
         e.preventDefault();
         const url = `${API}/usuarios?usuario=${usuario}&&senha=${senha}`

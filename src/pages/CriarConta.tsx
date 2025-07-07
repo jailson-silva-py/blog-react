@@ -37,7 +37,7 @@ const CriarConta = () => {
     const handleSubmit = useCallback( async (e:FormEvent) => {
 
         if (senha1 != senha2){alert("As senhas precisam ser iguais!"); return}
-        const url = `${API}?usuario=${usuario}`
+        const url = `${API}/usuarios?usuario=${usuario}`
         e.preventDefault();
         let dados = await getDados(url)
 

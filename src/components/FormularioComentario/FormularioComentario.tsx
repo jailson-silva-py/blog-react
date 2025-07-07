@@ -27,7 +27,7 @@ const FormularioComentario = ({postId}:{postId:string | undefined}) => {
     const [comentario, setComentario] = useState('')
 
     const comentarioAtual = useMemo(() => `${API}/comentarios?postId=${
-            postId}&autor=${usuarioLogado?.usuario}`, [usuarioLogado])
+            postId}&autor=${usuarioLogado?.usuario}`, [usuarioLogado, postId])
 
     const classeEstrelaHovered = (indice:number) => {
 

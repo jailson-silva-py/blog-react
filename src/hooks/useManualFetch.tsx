@@ -37,12 +37,7 @@ const useManualFetch = () => {
             headers:{"Content-Type":"application/json"},
             body: JSON.stringify(dados),
 
-           }) 
-           
-
-           console.log(request)
-
-            
+           })         
 
         } catch(error:any) {
 
@@ -53,8 +48,7 @@ const useManualFetch = () => {
             setLoading(false)
             if (!request) return
             
-            return 'text' in request? await request.text():undefined
-            
+            return 'text' in request? await request.text():undefined     
             
         }
 
